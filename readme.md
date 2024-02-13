@@ -2,7 +2,7 @@
 ```js
 const map = []
 
-#and sample Json app 
+# and sample Json app 
 ```json
 {
   "database": {
