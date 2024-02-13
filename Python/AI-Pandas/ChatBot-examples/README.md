@@ -2,8 +2,7 @@
 > pip install keras
 
 # Now show Snipett Py Implement Mini UI
-```
-python 
+```python 
 import tkinter as tk
 from tkinter import scrolledtext
 from keras.models import load_model
@@ -24,7 +23,6 @@ def generate_response():
 
 				root = tk.Tk()
 				root.title("AI Conversational Interface")
-
 				chat_history = scrolledtext.ScrolledText(root, state=tk.DISABLED, width=60, height=20, wrap=tk.WORD)
 				chat_history.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
@@ -41,7 +39,7 @@ def generate_response():
 ```
 # warning Not model create now show code save Model Personal 
 
-```
+```python
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import load_model
@@ -56,4 +54,4 @@ X_train = np.random.random((1000, 10))
 y_train = np.random.randint(2, size=(1000, 1))
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 model.save('your_model_path.h5')
-```
+
