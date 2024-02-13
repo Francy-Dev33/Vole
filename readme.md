@@ -1,7 +1,4 @@
 # create array Map 
-```
-js
+```js
 const map = []
-```
-
 
