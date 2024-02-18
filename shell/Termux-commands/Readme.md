@@ -1,3 +1,13 @@
 # How to running file 
-```bash
-   bash fix_python_dependencies.sh
+```bash 
+   pip3 install pygame
+   pkg install tur-repo
+   pkg install python-pygame
+   pip install --upgrade pip
+   pip install requests
+   pip install --upgrade setuptools wheel
+   pip install requests --upgrade
+   pip install numpy -vvv
+   apt update
+   sudo apt-get install python3-pygame
+
