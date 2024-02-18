@@ -1,12 +1,13 @@
 # How to running file 
-> fix_python_dependencies.sh
+```bash
+  bash tix_python_dependencies.sh
 
 <br> </br>
-```shell
+```bash
    fix_commands.sh
 
 # Not working normal  Try This option fix
-```shell 
+```bash 
    useradd name sudo su 
 
 
