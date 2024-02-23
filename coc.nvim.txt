@@ -1,0 +1,2 @@
+https://copyprogramming.com/howto/how-to-install-a-plugin-in-neovim-windows
+
