@@ -1,0 +1,55 @@
+<users>
+    <database>
+            <driver>mysql</driver>
+	            <host>localhost</host>
+		            <port>3306</port>
+			            <databaseName>raisers_db</databaseName>
+				            <username>user</username>
+					            <password>password</password>
+						        </database>
+							    <tools>
+					            <tool>
+								                <name>Tool1</name>
+										            <enabled>true</enabled>
+											                <settings>
+													                <option1>value1</option1>
+															                <option2>value2</option2>
+																	            </settings>
+																		            </tool>
+																			            <tool>
+																				                <name>Tool2</name>
+																						            <enabled>false</enabled>
+																							                <settings>
+																									                <option1>value1</option1>
+																											                <option2>value2</option2>
+																													                <option3>value3</option3>
+																															            </settings>
+																																            </tool>
+																																	        </tools>
+																																		    <users>
+																																		            <user>
+																																			                <username>admin</username>
+																																					            <password>admin_password</password>
+																																						                <role>admin</role>
+																																								        </user>
+																																									        <user>
+																																										            <username>user1</username>
+
+																																											                
+																																														            </user>
+																																															            <users>
+
+																																																   </users>
+																																																	    <settings>
+																																																	            <logLevel>DEBUG</logLevel>
+																																																		         maxConnections>100</maxConnections>
+																																																			            <timeout>300</timeout>
+																																																				            <emailNotifications>
+																																																					                <enabled>true</enabled>
+																																																							            <smtpServer>smtp.example.com</smtpServer>
+																																																								                <port>587</port>
+																																																										            <username>email@example.com</username>
+																																																											                <password>email_password</password>
+																																																													        </emailNotifications>
+																																																														    </settings>
+ 																																																														    </raisers>
