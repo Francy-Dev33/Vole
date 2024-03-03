@@ -4,15 +4,13 @@ from keras.layers import Input, LSTM, Dense
 
 def create_MDRT_chatbot(input_sequence_length, output_sequence_length, input_vocab_size, output_vocab_size):
     encoder_inputs = Input(shape=(input_sequence_length, input_vocab_size))
-        encoder_lstm = LSTM(256, return_state=True)
-	    _, encoder_state_h, encoder_state_c = encoder_lstm(encoder_inputs)
-	        encoder_states = [encoder_state_h, encoder_state_c]
-
-		    decoder_inputs = Input(shape=(output_sequence_length, output_vocab_size))
-		        decoder_lstm = LSTM(256, return_sequences=True, return_state=True)
-			    decoder_outputs, _, _ = decoder_lstm(decoder_inputs, initial_state=encoder_states)
-
-			        decoder_dense = Dense(output_vocab_size, activation='softmax')
+    encoder_lstm = LSTM(256, return_state=True)
+    encoder_state_h, encoder_state_c = encoder_lstm(encoder_inputs)
+	encoder_states = [encoder_state_h, encoder_state_c]
+    decoder_inputs = Input(shape=(output_sequence_length, output_vocab_size))
+	decoder_lstm = LSTM(256, return_sequences=True, return_state=True)
+    decoder_outputs, _, _ = decoder_lstm(decoder_inputs, initial_state=encoder_states)
+	 decoder_dense = Dense(output_vocab_size, activation='softmax')
 				    decoder_outputs = decoder_dense(decoder_outputs)
 
 				        model = Model([encoder_inputs, decoder_inputs], decoder_outputs, name='MDRT_chatbot')
@@ -29,3 +27,4 @@ def create_MDRT_chatbot(input_sequence_length, output_sequence_length, input_voc
 					    MDRT_chatbot_model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
 
 					    MDRT_chatbot_model.summary()
+	
